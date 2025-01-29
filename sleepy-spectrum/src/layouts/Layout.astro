@@ -1,5 +1,5 @@
 ---
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 ---
 
 <!DOCTYPE html>
@@ -12,13 +12,9 @@ import Header from '../components/Header.astro';
     <title>Mi Portafolio</title>
   </head>
   
-  <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
-    <!-- Header fijo en la parte superior -->
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
     <Header />
-
-    <!-- Contenido dinámico de cada página -->
-    <!-- pt-20 para evitar que el contenido quede bajo el header -->
-    <main class="pt-20">
+    <main class="pt-16">
       <slot />
     </main>
   </body>
