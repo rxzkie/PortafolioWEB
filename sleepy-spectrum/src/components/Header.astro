@@ -1,49 +1,42 @@
 ---
-/**
- * Menú de navegación con scroll suave en la misma página
- */
- const menuItems = [
+// Componente de Astro para el menú de navegación
+const menuItems = [
   { name: "Inicio", href: "#inicio" },
   { name: "Experiencia", href: "#experiencia" },
-  // Agrega aquí más secciones si quieres, como #habilidades, #proyectos, #contacto, etc.
+  { name: "Proyectos", href: "#proyectos" },
+  { name: "Contacto", href: "#contacto" },
 ];
 ---
 
 <header class="fixed w-full top-0 z-50 bg-white/50 dark:bg-gray-800/80 backdrop-blur-md transition-all">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav class="flex items-center justify-between h-16">
-      <!-- Logo -->
       <a href="#inicio" class="text-2xl font-bold text-gray-900 dark:text-gray-200">
         MiPortafolio
       </a>
 
-      <!-- Menú de Escritorio -->
       <div class="hidden md:flex space-x-6">
-        {menuItems.map(item => (
-          <a 
+        {menuItems.map((item) => (
+          <a
             href={item.href}
-            class="nav-link text-gray-900 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400
-                   px-3 py-2 text-sm font-medium transition-colors"
+            class="nav-link text-gray-900 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors"
           >
             {item.name}
           </a>
         ))}
       </div>
 
-      <!-- Botones: modo oscuro y menú móvil -->
       <div class="flex items-center space-x-4">
-        <!-- Modo oscuro -->
         <button id="dark-mode-toggle" class="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-indigo-500">
           <svg id="theme-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
         </button>
 
-        <!-- Menú móvil -->
         <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-500">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path 
-              stroke-linecap="round" 
-              stroke-linejoin="round" 
-              stroke-width="2" 
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
@@ -52,10 +45,9 @@
     </nav>
   </div>
 
-  <!-- Menú móvil -->
   <div id="mobile-menu" class="hidden bg-white dark:bg-gray-700 md:hidden">
     <div class="px-2 pt-2 pb-3 space-y-1">
-      {menuItems.map(item => (
+      {menuItems.map((item) => (
         <a
           href={item.href}
           class="nav-link block text-gray-900 dark:text-gray-200 hover:text-indigo-500 px-3 py-2 rounded-md text-base font-medium transition-colors"
@@ -66,63 +58,67 @@
     </div>
   </div>
 
-  <!-- Script para scroll suave y modo oscuro -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const toggleButton = document.getElementById('dark-mode-toggle');
-      const themeIcon = document.getElementById('theme-icon');
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const toggleButton = document.getElementById("dark-mode-toggle");
+      const themeIcon = document.getElementById("theme-icon");
       const root = document.documentElement;
-      const links = document.querySelectorAll('.nav-link');
+      const links = document.querySelectorAll(".nav-link");
 
       // Scroll suave al hacer clic en los enlaces
-      links.forEach(link => {
-        link.addEventListener('click', (e) => {
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
           e.preventDefault();
-          const targetId = link.getAttribute('href')?.substring(1);
+          const targetId = link.getAttribute("href")?.substring(1);
           const targetElement = targetId ? document.getElementById(targetId) : null;
-          
+
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 50,
-              behavior: "smooth"
+              top: targetElement.offsetTop - 50, // Ajusta este valor si es necesario
+              behavior: "smooth",
             });
+
+            // Cerrar el menú móvil después de hacer clic en un enlace (opcional)
+            if (mobileMenu && mobileMenu.classList.contains("block")) {
+              mobileMenu.classList.remove("block");
+            }
           }
         });
       });
 
       // Menú móvil
       if (menuButton && mobileMenu) {
-        menuButton.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
         });
       }
 
       // Función para cambiar el ícono de modo oscuro
       function setIcon() {
         if (!themeIcon) return;
-        themeIcon.innerHTML = root.classList.contains('dark')
+        themeIcon.innerHTML = root.classList.contains("dark")
           ? `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-               d="M17.293 14.707A8 8 0 119.172 6.586a4 4 0 105.656 5.656l2.465 2.465z" />`
+              d="M17.293 14.707A8 8 0 119.172 6.586a4 4 0 105.656 5.656l2.465 2.465z" />`
           : `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-               d="M12 3v1m0 16v1M4.22 4.22l.7.7m14.14-.7l-.7.7M1 12h1m16 0h1m-3.34 5.66l.7.7M6.34 17.66l-.7.7" />`;
+              d="M12 3v1m0 16v1M4.22 4.22l.7.7m14.14-.7l-.7.7M1 12h1m16 0h1m-3.34 5.66l.7.7M6.34 17.66l-.7.7" />`;
       }
 
       // Botón de modo oscuro
       if (toggleButton) {
-        toggleButton.addEventListener('click', () => {
-          root.classList.toggle('dark');
-          localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+        toggleButton.addEventListener("click", () => {
+          root.classList.toggle("dark");
+          localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
           setIcon();
         });
 
         // Inicializa el tema
-        const savedTheme = localStorage.getItem('theme');
+        const savedTheme = localStorage.getItem("theme");
         if (savedTheme) {
-          root.classList.toggle('dark', savedTheme === 'dark');
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          root.classList.add('dark');
+          root.classList.toggle("dark", savedTheme === "dark");
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          root.classList.add("dark");
         }
         setIcon();
       }
@@ -131,11 +127,11 @@
 </header>
 
 <style>
-/* Efecto de desenfoque y transición */
-header {
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-}
-a {
-  transition: color 0.3s ease;
-}
+  /* Estilos adicionales */
+  header {
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  a {
+    transition: color 0.3s ease;
+  }
 </style>
