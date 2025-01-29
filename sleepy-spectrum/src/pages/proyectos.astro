@@ -1,4 +1,8 @@
-<!-- Sección de Proyectos (id="proyectos") -->
+---
+---
+
+<!-- Coloca este contenido en tu archivo .astro correspondiente (por ejemplo, 'Proyectos.astro') -->
+
 <section id="proyectos" class="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 px-6 py-16 transition-colors duration-300">
     <div class="max-w-4xl text-center space-y-2">
       <h2 class="text-4xl font-bold text-gray-700 dark:text-green-200 mb-4">Mis Proyectos</h2>
@@ -9,16 +13,71 @@
   
     <!-- Contenedor de proyectos -->
     <div class="mt-12 space-y-8 max-w-3xl w-full relative">
-      <!-- Proyecto 1 -->
+      
+      <!-- Plataforma E-commerce con Django & Bootstrap (con miniatura y logos en SVG) -->
       <div class="flex items-start space-x-4 group">
+        <!-- Punto decorativo a la izquierda -->
         <div class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"></div>
+        
+        <!-- Contenido del proyecto -->
         <div class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6">
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">Proyecto 1: Desarrollo Web</h3>
-          <p class="text-green-600 dark:text-green-400 text-sm mt-1">Tecnologías utilizadas: HTML, CSS, JavaScript, React</p>
+          
+          <!-- Miniatura del proyecto -->
+          <img
+            src="https://i.ibb.co/PzsG0hrj/Sin-t-tulo.png"
+            alt="Plataforma E-commerce con Django"
+            class="w-40 h-40 object-cover mb-4 rounded-md shadow-md"
+          />
+          
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
+            Plataforma E-commerce con Django &amp; Bootstrap
+          </h3>
+          
+          <!-- Contenedor para los íconos SVG de Django y Bootstrap -->
+          <div class="flex items-center space-x-2 mt-1">
+            <!-- Logo de Django -->
+            <svg
+              class="w-6 h-6"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.135 4H18.1v18.169a26.218 26.218 0 0 1-5.143.535c-4.842-.005-7.362-2.168-7.362-6.322 0-4 2.673-6.6 6.816-6.6a6.448 6.448 0 0 1 1.724.2V4Zm0 9.142a3.992 3.992 0 0 0-1.337-.2c-2 0-3.163 1.223-3.163 3.366 0 2.087 1.107 3.239 3.138 3.239a9.355 9.355 0 0 0 1.362-.1v-6.3Z"
+                style="fill:#44b78b"
+              ></path>
+              <path
+                d="M24.4 10.059v9.1c0 3.133-.235 4.639-.923 5.938A6.316 6.316 0 0 1 20.237 28l-3.678-1.733a5.708 5.708 0 0 0 3.141-2.629c.566-1.121.745-2.42.745-5.837v-7.742ZM20.441 4.02h3.964v4.028h-3.964z"
+                style="fill:#44b78b"
+              ></path>
+            </svg>
+  
+            <!-- Logo de Bootstrap -->
+            <svg
+              class="w-6 h-6"
+              viewBox="0 0 256 204"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid"
+            >
+              <path
+                fill="#7E13F8"
+                d="M53.172 0C38.565 0 27.756 12.785 28.24 26.65c.465 13.32-.139 30.573-4.482 44.642C19.402 85.402 12.034 94.34 0 95.488v12.956c12.034 1.148 19.402 10.086 23.758 24.197 4.343 14.069 4.947 31.32 4.482 44.641-.484 13.863 10.325 26.65 24.934 26.65h149.673c14.608 0 25.414-12.785 24.93-26.65-.464-13.32.139-30.572 4.482-44.641 4.359-14.11 11.707-23.05 23.741-24.197V95.488c-12.034-1.148-19.382-10.086-23.74-24.196-4.344-14.067-4.947-31.321-4.483-44.642C228.261 12.787 217.455 0 202.847 0H53.17h.002ZM173.56 125.533c0 19.092-14.24 30.67-37.872 30.67h-40.23a4.339 4.339 0 0 1-4.338-4.339V52.068a4.339 4.339 0 0 1 4.339-4.34h39.999c19.705 0 32.637 10.675 32.637 27.063 0 11.503-8.7 21.801-19.783 23.604v.601c15.089 1.655 25.248 12.104 25.248 26.537Zm-42.26-64.05h-22.937v32.4h19.32c14.934 0 23.17-6.014 23.17-16.764 0-10.073-7.082-15.636-19.552-15.636Zm-22.937 45.256v35.705h23.782c15.548 0 23.786-6.239 23.786-17.965 0-11.728-8.467-17.742-24.786-17.742h-22.782v.002Z"
+              />
+            </svg>
+          </div>
+          
           <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
-            Desarrollo de un sitio web responsivo para una empresa de tecnología, utilizando React y Tailwind CSS.
+            Desarrollé una plataforma de comercio electrónico con Django y un diseño responsivo 
+            gracias a Bootstrap, incorporando funciones de administración de productos, manejo de 
+            carritos y un flujo de compra seguro.
           </p>
-          <a href="#" class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm mt-3">Ver más</a>
+          
+          <a 
+            href="https://urbangrowshop.pythonanywhere.com/index" 
+            target="_blank" 
+            class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm mt-3 inline-block"
+          >
+            Ver más
+          </a>
         </div>
       </div>
   
@@ -26,15 +85,40 @@
       <div class="flex items-start space-x-4 group">
         <div class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"></div>
         <div class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6">
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">Proyecto 2: Desarrollo Móvil</h3>
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">Proyecto 2: Desarrollo Web</h3>
+          <p class="text-green-600 dark:text-green-400 text-sm mt-1">Tecnologías utilizadas: HTML, CSS, JavaScript, React</p>
+          <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
+            Desarrollo de un sitio web responsivo para una empresa de tecnología, utilizando React y Tailwind CSS.
+          </p>
+          <a 
+            href="#" 
+            class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm mt-3 inline-block"
+          >
+            Ver más
+          </a>
+        </div>
+      </div>
+  
+      <!-- Proyecto 3 -->
+      <div class="flex items-start space-x-4 group">
+        <div class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"></div>
+        <div class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">Proyecto 3: Desarrollo Móvil</h3>
           <p class="text-green-600 dark:text-green-400 text-sm mt-1">Tecnologías utilizadas: Java, Android Studio</p>
           <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
             Desarrollo de una aplicación móvil para una empresa de logística, utilizando Java y Android Studio.
           </p>
-          <a href="#" class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm mt-3">Ver más</a>
+          <a 
+            href="#" 
+            class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm mt-3 inline-block"
+          >
+            Ver más
+          </a>
         </div>
       </div>
   
-      <!-- Repetir estructura para otros proyectos -->
+      <!-- Agrega más proyectos si lo requieres -->
+  
     </div>
   </section>
+  
