@@ -1,35 +1,78 @@
 ---
-// Componente Experiencia.astro
 ---
 
-<section id="experiencia" class="min-h-screen flex flex-col items-center justify-center bg-green-50 dark:bg-gray-800 px-6 py-16 transition-colors duration-300">
+
+<section
+  id="experiencia"
+  class="min-h-screen flex flex-col items-center justify-center bg-green-50 dark:bg-gray-800 px-6 py-16 transition-colors duration-300"
+>
   <div class="max-w-4xl text-center space-y-2">
     <h2 class="text-4xl font-bold text-gray-700 dark:text-green-200 mb-4">Mi Experiencia</h2>
     <p class="text-lg text-gray-600 dark:text-green-200/80 leading-relaxed">
-      He trabajado en proyectos innovadores enfocados en tecnología y desarrollo sostenible.
+      He sumado aprendizajes y conocimientos en diferentes entornos de trabajo, tanto presenciales como remotos.
     </p>
   </div>
 
-  <!-- Línea del tiempo mejorada -->
+  <!-- Línea del tiempo -->
   <div class="mt-12 space-y-8 max-w-3xl w-full relative">
     <!-- Decoración de hoja con colores coherentes -->
-    <div class="absolute -top-8 left-6 w-16 h-16 opacity-20 dark:opacity-30"
-         style="background-image: url('/svg/leaf.svg'); filter: invert(26%) sepia(76%) saturate(385%) hue-rotate(92deg) brightness(92%) contrast(91%);">
-    </div>
+    <div
+      class="absolute -top-8 left-6 w-16 h-16 opacity-20 dark:opacity-30"
+      style="
+        background-image: url('/svg/leaf.svg');
+        filter: invert(26%) sepia(76%) saturate(385%) hue-rotate(92deg) brightness(92%) contrast(91%);
+      "
+    ></div>
 
-    <!-- Item experiencia -->
+    <!-- Item experiencia 1: EcoAlliance SpA -->
     <div class="flex items-start space-x-4 group">
-      <div class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"></div>
-      <div class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">Desarrollador Frontend</h3>
-        <p class="text-green-600 dark:text-green-400 text-sm mt-1">Empresa XYZ · 2022 - Presente</p>
+      <!-- Punto decorativo a la izquierda -->
+      <div
+        class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"
+      ></div>
+      <div
+        class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6"
+      >
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
+          Estudiante en prácticas
+        </h3>
+        <p class="text-green-600 dark:text-green-400 text-sm mt-1">
+          EcoAlliance SpA &middot; oct. 2024 - dic. 2024 &middot; 3 meses
+        </p>
+        <p class="text-gray-600 dark:text-green-200/80 text-sm mt-1">
+          Viña del Mar, Región de Valparaíso, Chile &middot; Presencial
+        </p>
         <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
-          Desarrollo de interfaces con Astro, React y Tailwind CSS, enfocados en UI accesible y ecológica.
+          JavaScript
         </p>
       </div>
     </div>
 
-    <!-- Repetir estructura para otros items -->
+    <!-- Item experiencia 2: Permify -->
+    <div class="flex items-start space-x-4 group">
+      <!-- Punto decorativo a la izquierda -->
+      <div
+        class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"
+      ></div>
+      <div
+        class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6"
+      >
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
+          Estudiante en prácticas
+        </h3>
+        <p class="text-green-600 dark:text-green-400 text-sm mt-1">
+          Permify &middot; may. 2024 - may. 2024 &middot; 1 mes
+        </p>
+        <p class="text-gray-600 dark:text-green-200/80 text-sm mt-1">
+          En remoto
+        </p>
+        <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
+          JavaScript
+        </p>
+      </div>
+    </div>
+
+    <!-- Agrega más items de experiencia si es necesario -->
   </div>
 </section>
 
@@ -38,7 +81,7 @@
   #experiencia .group:hover .border-l-2 {
     border-color: #16a34a; /* green-600 */
   }
-  
+
   /* Ajustes de modo oscuro */
   .dark #experiencia .group:hover .border-l-2 {
     border-color: #4ade80; /* green-400 */
