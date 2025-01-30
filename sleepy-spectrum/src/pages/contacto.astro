@@ -1,78 +1,31 @@
 <section
   id="contacto"
-  class="min-h-screen flex flex-col items-center justify-center bg-green-50 dark:bg-gray-800 px-6 py-16 transition-colors duration-300"
+  class="min-h-screen flex flex-col items-center justify-center bg-green-50 dark:bg-gray-800 px-6 py-10 transition-colors duration-300"
 >
-  <!-- Contenedor del título y redes sociales -->
+  <!-- Contenedor del título y descripción -->
   <div class="max-w-3xl text-center">
-    <h2 class="text-4xl font-bold text-gray-700 dark:text-green-200 mb-4">
+    <h2 class="text-4xl font-bold text-gray-700 dark:text-green-200 mb-2">
       Contacto
     </h2>
 
-    <!-- Íconos de Redes Sociales -->
-    <div class="grid grid-cols-4 gap-4 justify-center items-center mb-4">
-      <a
-        href="https://www.linkedin.com/in/tu-perfil"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-      >
-        <svg width="30" height="30" class="fill-current text-gray-700 dark:text-green-200 hover:text-green-500 transition-all">
-          <use xlink:href="/icons/icons.svg#icon-linkedin"></use>
-        </svg>
-      </a>
+    <p class="text-lg text-gray-600 dark:text-green-200/80 leading-relaxed">
+      ¿Tienes alguna consulta o propuesta? No dudes en escribirme, estaré encantado de responderte.
+    </p>
 
-      <a
-        href="https://github.com/tu-usuario"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-      >
-        <svg width="30" height="30" class="fill-current text-gray-700 dark:text-green-200 hover:text-green-500 transition-all">
-          <use xlink:href="/icons/icons.svg#icon-github"></use>
-        </svg>
-      </a>
-
-      <a
-        href="https://twitter.com/tu-usuario"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Twitter"
-      >
-        <svg width="30" height="30" class="fill-current text-gray-700 dark:text-green-200 hover:text-green-500 transition-all">
-          <use xlink:href="/icons/icons.svg#icon-twitter"></use>
-        </svg>
-      </a>
-
-      <a
-        href="mailto:ren.rios@duocuc.cl"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Correo Electrónico"
-      >
-        <svg width="30" height="30" class="fill-current text-gray-700 dark:text-green-200 hover:text-green-500 transition-all">
-          <use xlink:href="/icons/icons.svg#icon-gmail"></use>
-        </svg>
+    <!-- Email de contacto correctamente centrado -->
+    <div class="mt-3 flex justify-center items-center space-x-2">
+      <span class="text-gray-700 dark:text-green-200 text-sm">📧</span>
+      <a href="mailto:ren.rios@duocuc.cl" class="text-gray-700 dark:text-green-200 hover:text-green-500 text-sm">
+        ren.rios@duocuc.cl
       </a>
     </div>
-
-    <p class="text-lg text-gray-600 dark:text-green-200/80 leading-relaxed">
-      ¿Tienes alguna consulta o propuesta? No dudes en escribirme, estaré
-      encantado de responderte.
-    </p>
-  </div>
-
-  <!-- Email de contacto -->
-  <div class="mt-6 text-gray-700 dark:text-green-200 text-sm">
-    📧 <a href="mailto:ren.rios@duocuc.cl" class="hover:text-green-500"
-      >ren.rios@duocuc.cl</a
-    >
   </div>
 
   <!-- Formulario de contacto con Formspree -->
   <form
     action="https://formspree.io/f/mldgnrke"
     method="POST"
-    class="mt-8 max-w-lg w-full bg-white dark:bg-gray-900 shadow-lg rounded-lg p-6 space-y-4"
+    class="mt-6 max-w-lg w-full bg-white dark:bg-gray-900 shadow-lg rounded-lg p-6 space-y-4"
   >
     <div>
       <label for="name" class="block text-sm font-medium text-gray-700 dark:text-green-200">Nombre</label>
