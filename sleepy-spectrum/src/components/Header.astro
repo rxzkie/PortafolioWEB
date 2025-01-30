@@ -1,5 +1,4 @@
 ---
-// Componente de Astro para el menú de navegación
 const menuItems = [
   { name: "Inicio", href: "#inicio" },
   { name: "Experiencia", href: "#experiencia" },
@@ -10,11 +9,7 @@ const menuItems = [
 
 <header class="fixed w-full top-0 z-50 bg-white/50 dark:bg-gray-800/80 backdrop-blur-md transition-all">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <nav class="flex items-center justify-between h-16">
-      <a href="#inicio" class="text-2xl font-bold text-gray-900 dark:text-gray-200">
-        MiPortafolio
-      </a>
-
+    <nav class="flex items-center justify-center h-16">
       <div class="hidden md:flex space-x-6">
         {menuItems.map((item) => (
           <a
@@ -26,7 +21,7 @@ const menuItems = [
         ))}
       </div>
 
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-4 absolute right-4">
         <button id="dark-mode-toggle" class="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-indigo-500">
           <svg id="theme-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
         </button>
@@ -67,7 +62,6 @@ const menuItems = [
       const root = document.documentElement;
       const links = document.querySelectorAll(".nav-link");
 
-      // Scroll suave al hacer clic en los enlaces
       links.forEach((link) => {
         link.addEventListener("click", (e) => {
           e.preventDefault();
@@ -76,11 +70,10 @@ const menuItems = [
 
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 50, // Ajusta este valor si es necesario
+              top: targetElement.offsetTop - 50,
               behavior: "smooth",
             });
 
-            // Cerrar el menú móvil después de hacer clic en un enlace (opcional)
             if (mobileMenu && mobileMenu.classList.contains("block")) {
               mobileMenu.classList.remove("block");
             }
@@ -88,14 +81,12 @@ const menuItems = [
         });
       });
 
-      // Menú móvil
       if (menuButton && mobileMenu) {
         menuButton.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
         });
       }
 
-      // Función para cambiar el ícono de modo oscuro
       function setIcon() {
         if (!themeIcon) return;
         themeIcon.innerHTML = root.classList.contains("dark")
@@ -105,7 +96,6 @@ const menuItems = [
               d="M12 3v1m0 16v1M4.22 4.22l.7.7m14.14-.7l-.7.7M1 12h1m16 0h1m-3.34 5.66l.7.7M6.34 17.66l-.7.7" />`;
       }
 
-      // Botón de modo oscuro
       if (toggleButton) {
         toggleButton.addEventListener("click", () => {
           root.classList.toggle("dark");
@@ -113,7 +103,6 @@ const menuItems = [
           setIcon();
         });
 
-        // Inicializa el tema
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme) {
           root.classList.toggle("dark", savedTheme === "dark");
@@ -127,7 +116,6 @@ const menuItems = [
 </header>
 
 <style>
-  /* Estilos adicionales */
   header {
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
   }

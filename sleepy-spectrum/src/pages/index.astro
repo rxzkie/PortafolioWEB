@@ -5,42 +5,38 @@ import Proyectos from './proyectos.astro';
 ---
 
 <Layout>
-  <!-- Estilos para reducir espacio entre secciones -->
+  <!-- Estilos globales para ajustar el espacio entre secciones -->
   <style is:global>
     section {
-      min-height: 100vh;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      margin-bottom: 0;
-    }
-    section:not(:last-child) {
-      margin-bottom: -1rem;
+      padding-top: 8px; /* Ajusta el espacio superior de cada sección */
+      padding-bottom: 8px; /* Ajusta el espacio inferior de cada sección */
+      margin-bottom: 4px; /* Ajusta la separación entre secciones */
     }
     body {
       scroll-padding-top: 0;
     }
   </style>
 
-  <!-- Sección "Sobre Mí" (id="inicio") -->
+  <!-- Sección "Sobre Mí" -->
   <section id="inicio" class="flex flex-col items-center justify-center bg-white dark:bg-black text-center px-6">
     <div class="max-w-4xl">
       <h1 class="text-5xl font-bold text-black dark:text-white">¡Hola, soy Renzo!</h1>
-      <p class="text-lg text-gray-700 dark:text-gray-300 mt-4">
+      <p class="text-lg text-gray-700 dark:text-gray-300 mt-3"> 
         Soy un desarrollador apasionado por la tecnología y la innovación...
       </p>
     </div>
 
-    <!-- Botón con colores neutros y verde como secundario -->
-    <a href="#experiencia" class="mt-8 inline-block bg-white text-black border border-green-600 
+    <!-- Botón con mayor separación inferior -->
+    <a href="#experiencia" class="mt-10 inline-block bg-white text-black border border-green-600 
        hover:bg-green-600 hover:text-white dark:bg-black dark:text-white dark:border-green-500 
        dark:hover:bg-green-500 dark:hover:text-black text-lg font-semibold px-6 py-3 rounded-md shadow-md transition-all">
       Ver mi experiencia
     </a>
   </section>
 
-  <!-- Sección de Experiencia (id="experiencia") -->
+  <!-- Sección de Experiencia -->
   <Experiencia />
 
-  <!-- Sección de Proyectos (id="proyectos") -->
+  <!-- Sección de Proyectos -->
   <Proyectos />
 </Layout>
