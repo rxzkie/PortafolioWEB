@@ -1,7 +1,3 @@
----
----
-
-
 <section
   id="experiencia"
   class="min-h-screen flex flex-col items-center justify-center bg-green-50 dark:bg-gray-800 px-6 py-16 transition-colors duration-300"
@@ -20,19 +16,21 @@
       class="absolute -top-8 left-6 w-16 h-16 opacity-20 dark:opacity-30"
       style="
         background-image: url('/svg/leaf.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
         filter: invert(26%) sepia(76%) saturate(385%) hue-rotate(92deg) brightness(92%) contrast(91%);
       "
+      aria-hidden="true"
     ></div>
 
     <!-- Item experiencia 1: EcoAlliance SpA -->
-    <div class="flex items-start space-x-4 group">
+    <article class="flex items-start space-x-4 group">
       <!-- Punto decorativo a la izquierda -->
       <div
         class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"
+        aria-hidden="true"
       ></div>
-      <div
-        class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6"
-      >
+      <div class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6">
         <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
           Estudiante en prácticas
         </h3>
@@ -43,34 +41,34 @@
           Viña del Mar, Región de Valparaíso, Chile &middot; Presencial
         </p>
         <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
-          JavaScript
+          Desarrollo de <strong>EcoAlliance</strong> utilizando <strong>WordPress</strong> para la gestión de contenido y creación de una nueva plataforma full stack con <strong>Next.js</strong> y <strong>NestJS</strong>. Integré un <strong>chatbot con IA</strong> conectado a <strong>PostgreSQL</strong> para facilitar consultas en tiempo real sobre productos.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- Item experiencia 2: Permify -->
-    <div class="flex items-start space-x-4 group">
+    <article class="flex items-start space-x-4 group">
       <!-- Punto decorativo a la izquierda -->
       <div
         class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"
+        aria-hidden="true"
       ></div>
-      <div
-        class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6"
-      >
+      <div class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6">
         <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
           Estudiante en prácticas
         </h3>
         <p class="text-green-600 dark:text-green-400 text-sm mt-1">
-          Permify &middot; may. 2024 - may. 2024 &middot; 1 mes
+          Permify &middot; may. 2024 &middot; 1 mes
         </p>
         <p class="text-gray-600 dark:text-green-200/80 text-sm mt-1">
           En remoto
         </p>
         <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
-          JavaScript
+          Desarrollé una plataforma en <strong>Django</strong> para predecir ventas a partir de datos <strong>CSV</strong>. Utilicé modelos como <strong>regresión lineal</strong>, <strong>árboles de decisión</strong>, <strong>bosque aleatorio</strong> y <strong>XGBoost</strong>.  
+          La interfaz muestra resultados con gráficos y tablas interactivas, utilizando modelos de predicción avanzados.
         </p>
       </div>
-    </div>
+    </article>
 
     <!-- Agrega más items de experiencia si es necesario -->
   </div>
@@ -85,5 +83,10 @@
   /* Ajustes de modo oscuro */
   .dark #experiencia .group:hover .border-l-2 {
     border-color: #4ade80; /* green-400 */
+  }
+
+  /* Animación adicional para el punto decorativo */
+  #experiencia .group:hover .w-3.h-3 {
+    background-color: #15803d; /* green-700 */
   }
 </style>
