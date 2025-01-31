@@ -9,8 +9,8 @@ import Header from "../components/Header.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Título optimizado para SEO -->
-    <title>Mi Portafolio | Desarrollador Full Stack</title>
-    <meta name="description" content="Soy Renzo, un Desarrollador Full Stack especializado en tecnologías modernas. Explora mis proyectos y habilidades." />
+    <title>Renzo Ríos | Desarrollador Full Stack & Creación de Páginas Web</title>
+    <meta name="description" content="Soy Renzo Ríos, un Desarrollador Full Stack especializado en la creación y venta de páginas web modernas y funcionales. Descubre mis proyectos y servicios." />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -19,16 +19,16 @@ import Header from "../components/Header.astro";
     <link rel="canonical" href="https://miportafolio.com/" />
 
     <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="Mi Portafolio | Desarrollador Full Stack" />
-    <meta property="og:description" content="Soy Renzo, un Desarrollador Full Stack especializado en tecnologías modernas. Explora mis proyectos y habilidades." />
+    <meta property="og:title" content="Renzo Ríos | Desarrollador Full Stack & Creación de Páginas Web" />
+    <meta property="og:description" content="Soy Renzo Ríos, un Desarrollador Full Stack especializado en la creación y venta de páginas web modernas y funcionales. Descubre mis proyectos y servicios." />
     <meta property="og:image" content="https://miportafolio.com/imagen-portada.jpg" />
     <meta property="og:url" content="https://miportafolio.com/" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mi Portafolio | Desarrollador Full Stack" />
-    <meta name="twitter:description" content="Soy Renzo, un Desarrollador Full Stack especializado en tecnologías modernas. Explora mis proyectos y habilidades." />
+    <meta name="twitter:title" content="Renzo Ríos | Desarrollador Full Stack & Creación de Páginas Web" />
+    <meta name="twitter:description" content="Soy Renzo Ríos, un Desarrollador Full Stack especializado en la creación y venta de páginas web modernas y funcionales. Descubre mis proyectos y servicios." />
     <meta name="twitter:image" content="https://miportafolio.com/imagen-portada.jpg" />
 
     <!-- Meta robots para indexación -->
@@ -50,7 +50,7 @@ import Header from "../components/Header.astro";
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Renzo Rios",
+      "name": "Renzo Ríos",
       "url": "https://miportafolio.com/",
       "sameAs": [
         "https://github.com/rxzkie",
@@ -62,6 +62,39 @@ import Header from "../components/Header.astro";
         "name": "Freelance"
       }
     }
+    </script>
+
+    <!-- Breadcrumbs Datos Estructurados -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://miportafolio.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Proyectos",
+        "item": "https://miportafolio.com/proyectos"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Contacto"
+      }]
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <!-- Reemplaza 'TU_ID_ANALYTICS' con tu propio ID de Google Analytics -->
+    <script lang="javascript" async src="https://www.googletagmanager.com/gtag/js?id=TU_ID_ANALYTICS"></script>
+    <script lang="javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'TU_ID_ANALYTICS');
     </script>
 
     <!-- CSS Global -->
@@ -82,37 +115,14 @@ import Header from "../components/Header.astro";
     <main class="pt-16">
       <slot />
     </main>
-
-    <!-- Script para scroll suave personalizado -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const scrollLinks = document.querySelectorAll(".scroll-link");
-
-        scrollLinks.forEach(link => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            // Asegurarse de que el currentTarget es un elemento <a>
-            if (!(e.currentTarget instanceof HTMLAnchorElement)) return;
-
-            const href = e.currentTarget.getAttribute("href");
-            if (!href) return;
-
-            const targetId = href.substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-              const offset = 70; // Ajusta este valor para controlar cuánto baja
-              const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-              const offsetPosition = elementPosition - offset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-              });
-            }
-          });
-        });
-      });
-    </script>
+    
+    <!-- Footer (Opcional) -->
+    <footer class="bg-gray-200 dark:bg-gray-800 text-center p-4">
+      <p>&copy; {new Date().getFullYear()} Renzo Ríos. Todos los derechos reservados.</p>
+      <p>
+        <a href="/privacy-policy" class="text-blue-500 hover:underline">Política de Privacidad</a> | 
+        <a href="/terms-of-service" class="text-blue-500 hover:underline">Términos de Servicio</a>
+      </p>
+    </footer>
   </body>
 </html>
