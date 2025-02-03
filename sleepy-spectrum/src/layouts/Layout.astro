@@ -1,24 +1,23 @@
 ---
 import Header from "../components/Header.astro";
+
 ---
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!-- Meta básicos -->
+    <!-- Meta básicos y otros tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Título optimizado para SEO -->
     <title>Renzo Ríos | Desarrollador Full Stack & Creación de Páginas Web</title>
     <meta name="description" content="Soy Renzo Ríos, un Desarrollador Full Stack especializado en la creación y venta de páginas web modernas y funcionales. Descubre mis proyectos y servicios." />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Canonical URL para evitar contenido duplicado -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://miportafolio.com/" />
 
-    <!-- Open Graph para redes sociales -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Renzo Ríos | Desarrollador Full Stack & Creación de Páginas Web" />
     <meta property="og:description" content="Soy Renzo Ríos, un Desarrollador Full Stack especializado en la creación y venta de páginas web modernas y funcionales. Descubre mis proyectos y servicios." />
     <meta property="og:image" content="https://miportafolio.com/imagen-portada.jpg" />
@@ -31,9 +30,9 @@ import Header from "../components/Header.astro";
     <meta name="twitter:description" content="Soy Renzo Ríos, un Desarrollador Full Stack especializado en la creación y venta de páginas web modernas y funcionales. Descubre mis proyectos y servicios." />
     <meta name="twitter:image" content="https://miportafolio.com/imagen-portada.jpg" />
 
-    <!-- Meta robots para indexación -->
+    <!-- Meta robots -->
     <meta name="robots" content="index, follow" />
-    
+
     <!-- Generador Astro -->
     <meta name="generator" content={Astro.generator} />
 
@@ -42,10 +41,10 @@ import Header from "../components/Header.astro";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Fuente optimizada para mejorar el tiempo de carga -->
+    <!-- Fuente -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" />
 
-    <!-- Datos Estructurados JSON-LD para SEO Avanzado -->
+    <!-- Datos Estructurados JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -88,7 +87,6 @@ import Header from "../components/Header.astro";
     </script>
 
     <!-- Google Analytics -->
-    <!-- Reemplaza 'TU_ID_ANALYTICS' con tu propio ID de Google Analytics -->
     <script lang="javascript" async src="https://www.googletagmanager.com/gtag/js?id=TU_ID_ANALYTICS"></script>
     <script lang="javascript">
       window.dataLayer = window.dataLayer || [];
@@ -116,7 +114,9 @@ import Header from "../components/Header.astro";
       <slot />
     </main>
     
-    <!-- Footer (Opcional) -->
+
+
+    <!-- Footer -->
     <footer class="bg-gray-200 dark:bg-gray-800 text-center p-4">
       <p>&copy; {new Date().getFullYear()} Renzo Ríos. Todos los derechos reservados.</p>
       <p>
