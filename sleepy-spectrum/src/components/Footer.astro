@@ -1,0 +1,35 @@
+---
+const footerItems = [
+  { name: "Inicio", href: "#inicio" },
+  { name: "Experiencia", href: "#experiencia" },
+  { name: "Proyectos", href: "#proyectos" },
+  { name: "Contacto", href: "#contacto" },
+];
+---
+
+<footer class="w-full bg-white/50 dark:bg-gray-800/80 backdrop-blur-md py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <nav class="flex justify-center space-x-4 mb-2">
+      {footerItems.map(item => (
+        <a
+          href={item.href}
+          class="text-gray-900 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 text-sm transition-colors"
+        >
+          {item.name}
+        </a>
+      ))}
+    </nav>
+    <p class="text-gray-700 dark:text-gray-300 text-xs">
+      &copy; {new Date().getFullYear()} Renzo Ríos. Todos los derechos reservados.
+    </p>
+    <p class="text-gray-700 dark:text-gray-300 text-xs mt-1">
+      Contacto: <a href="mailto:ren.rios@duocuc.cl" class="text-indigo-500 hover:underline">ren.rios@duocuc.cl</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer, a {
+    transition: all 0.3s ease;
+  }
+</style>
