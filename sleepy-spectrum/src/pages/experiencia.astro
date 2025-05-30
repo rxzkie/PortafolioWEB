@@ -1,92 +1,105 @@
 <section
-  id="experiencia"
+  id="sobre-mi"
   class="min-h-screen flex flex-col items-center justify-center bg-green-50 dark:bg-gray-800 px-6 py-16 transition-colors duration-300"
 >
-  <div class="max-w-4xl text-center space-y-2">
-    <h2 class="text-4xl font-bold text-gray-700 dark:text-green-200 mb-4">Mi Experiencia</h2>
+  <div class="max-w-6xl text-center space-y-2 mb-12">
+    <h2 class="text-4xl font-bold text-gray-700 dark:text-green-200 mb-4">Sobre Mí</h2>
     <p class="text-lg text-gray-600 dark:text-green-200/80 leading-relaxed">
-      He sumado aprendizajes y conocimientos en diferentes entornos de trabajo, tanto presenciales como remotos.
+      Estudiante de Ingeniería en Informática apasionado por el desarrollo de software y las nuevas tecnologías.
     </p>
   </div>
 
-  <!-- Línea del tiempo -->
-  <div class="mt-12 space-y-8 max-w-3xl w-full relative">
-    <!-- Decoración de hoja con colores coherentes -->
-    <div
-      class="absolute -top-8 left-6 w-16 h-16 opacity-20 dark:opacity-30"
-      style="
-        background-image: url('/assets/leaf.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        filter: invert(26%) sepia(76%) saturate(385%) hue-rotate(92deg) brightness(92%) contrast(91%);
-      "
-      aria-hidden="true"
-    ></div>
+  <!-- Contenedor principal con grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
+    
+    <!-- Columna 1: Estudios -->
+    <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg">
+      <h3 class="text-2xl font-semibold text-gray-800 dark:text-green-200 mb-4">
+        Formación Académica
+      </h3>
+      <div class="space-y-4">
+        <div class="border-l-2 border-green-100 dark:border-green-900 pl-4">
+          <h4 class="text-xl font-semibold text-gray-800 dark:text-green-200">
+            Ingeniería en Informática
+          </h4>
+          <p class="text-green-600 dark:text-green-400 text-sm mt-1">
+            Duoc UC &middot; 2022 - Presente
+          </p>
+          <p class="text-gray-600 dark:text-green-200/80 text-sm mt-2">
+            Viña del Mar, Chile
+          </p>
+        </div>
+      </div>
+    </div>
 
-    <!-- Item experiencia 1: EcoAlliance SpA -->
-    <article class="flex items-start space-x-4 group">
-      <!-- Punto decorativo a la izquierda -->
-      <div
-        class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"
-        aria-hidden="true"
-      ></div>
-      <div class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
-          Estudiante en prácticas
-        </h3>
-        <p class="text-green-600 dark:text-green-400 text-sm mt-1">
-          EcoAlliance SpA &middot; oct. 2024 - ene. 2025 &middot; 3 meses
-        </p>
-        <p class="text-gray-600 dark:text-green-200/80 text-sm mt-1">
-          Viña del Mar, Región de Valparaíso, Chile &middot; Presencial
-        </p>
-        <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
-          Desarrollo de <strong>EcoAlliance</strong> utilizando <strong>WordPress</strong> para la gestión de contenido y creación de una nueva plataforma full stack con <strong>Next.js</strong> y <strong>NestJS</strong>. Integré un <strong>chatbot con IA</strong> conectado a <strong>PostgreSQL</strong> para facilitar consultas en tiempo real sobre productos.
+    <!-- Columna 2: Sobre mí -->
+    <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg">
+      <h3 class="text-2xl font-semibold text-gray-800 dark:text-green-200 mb-4">
+        Perfil
+      </h3>
+      <div class="text-gray-600 dark:text-green-200/80 leading-relaxed">
+        <p>
+          Me especializo en el desarrollo web full-stack y tengo un gran interés en la inteligencia artificial y el análisis de datos. Mi formación en Duoc UC me ha permitido desarrollar habilidades técnicas sólidas y una perspectiva práctica del desarrollo de software.
         </p>
       </div>
-    </article>
+    </div>    <!-- Columna 3: Trayectoria -->
+    <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg">
+      <h3 class="text-2xl font-semibold text-gray-800 dark:text-green-200 mb-4">
+        Trayectoria Profesional
+      </h3>
+      <div class="space-y-6">
+        <!-- EcoAlliance -->
+        <div class="border-l-2 border-green-100 dark:border-green-900 pl-4">
+          <h4 class="text-lg font-semibold text-gray-800 dark:text-green-200">
+            EcoAlliance SpA
+          </h4>
+          <p class="text-green-600 dark:text-green-400 text-sm">
+            oct. 2024 - ene. 2025
+          </p>
+          <p class="text-gray-600 dark:text-green-200/80 text-sm mt-2">
+            Desarrollo full-stack con WordPress, Next.js y NestJS. Integración de chatbot IA.
+          </p>
+        </div>
 
-    <!-- Item experiencia 2: Permify -->
-    <article class="flex items-start space-x-4 group">
-      <!-- Punto decorativo a la izquierda -->
-      <div
-        class="w-3 h-3 bg-green-500 rounded-full mt-2.5 transform group-hover:scale-150 transition-all"
-        aria-hidden="true"
-      ></div>
-      <div class="flex-1 border-l-2 border-green-100 dark:border-green-900 pl-6 pb-6">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
-          Estudiante en prácticas
-        </h3>
-        <p class="text-green-600 dark:text-green-400 text-sm mt-1">
-          Permify &middot; may. 2024 &middot; 1 mes
-        </p>
-        <p class="text-gray-600 dark:text-green-200/80 text-sm mt-1">
-          En remoto
-        </p>
-        <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed">
-          Desarrollé una plataforma en <strong>Django</strong> para predecir ventas a partir de datos <strong>CSV</strong>. Utilicé modelos como <strong>regresión lineal</strong>, <strong>árboles de decisión</strong>, <strong>bosque aleatorio</strong> y <strong>XGBoost</strong>.  
-          La interfaz muestra resultados con gráficos y tablas interactivas, utilizando modelos de predicción avanzados.
-        </p>
+        <!-- Permify -->
+        <div class="border-l-2 border-green-100 dark:border-green-900 pl-4">
+          <h4 class="text-lg font-semibold text-gray-800 dark:text-green-200">
+            Permify
+          </h4>
+          <p class="text-green-600 dark:text-green-400 text-sm">
+            may. 2024 &middot; 1 mes
+          </p>
+          <p class="text-gray-600 dark:text-green-200/80 text-sm mt-2">
+            Desarrollo de plataforma Django para predicción de ventas usando ML.
+          </p>
+        </div>
       </div>
-    </article>
+    </div>
 
-    <!-- Agrega más items de experiencia si es necesario -->
   </div>
 </section>
 
 <style is:global>
-  /* Efectos de hover personalizados */
-  #experiencia .group:hover .border-l-2 {
-    border-color: #16a34a; /* green-600 */
+  /* Efectos de hover */
+  .dark #sobre-mi .border-l-2 {
+    border-color: #1f2937;
   }
 
-  /* Ajustes de modo oscuro */
-  .dark #experiencia .group:hover .border-l-2 {
-    border-color: #4ade80; /* green-400 */
+  #sobre-mi .border-l-2:hover {
+    border-color: #16a34a;
+    transition: border-color 0.3s ease;
   }
 
-  /* Animación adicional para el punto decorativo */
-  #experiencia .group:hover .w-3.h-3 {
-    background-color: #15803d; /* green-700 */
+  .dark #sobre-mi .border-l-2:hover {
+    border-color: #4ade80;
+  }
+
+  /* Animación para las cards */
+  #sobre-mi .bg-white {
+    transition: transform 0.3s ease;
+  }
+
+  #sobre-mi .bg-white:hover {
+    transform: translateY(-5px);
   }
 </style>
