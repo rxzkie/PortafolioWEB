@@ -1,159 +1,216 @@
-<section id="proyectos" class="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 px-6 py-16 transition-colors duration-300">
-  <div class="max-w-4xl text-center space-y-2">
-    <h2 class="text-4xl font-bold text-gray-700 dark:text-green-200 mb-4">
-      Mis Proyectos
-    </h2>
-    <p class="text-lg text-gray-600 dark:text-green-200/80 leading-relaxed">
-      Algunos de mis proyectos más destacados, donde he aplicado mis habilidades y conocimientos.
-    </p>
-  </div>
+<section id="proyectos" class="min-h-screen bg-white dark:bg-gray-900 px-6 py-20 transition-colors duration-300" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center space-y-4 mb-16" data-aos="fade-up">
+      <h2 class="text-5xl font-bold text-gray-800 dark:text-green-200">
+        Portafolio
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-green-200/80 max-w-2xl mx-auto">
+        Algunos de mis proyectos más destacados, donde he aplicado mis habilidades y conocimientos.
+      </p>
+    </div>
 
-  <!-- Contenedor de proyectos -->
-  <div class="mt-12 space-y-8 max-w-4xl w-full">
-    
-    <!-- 🟢 EcoAlliance - Chatbot con IA y Base de Datos -->
-    <div class="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 border-l-2 border-green-300 dark:border-green-700 pl-4 md:pl-6 pb-6">
-      <img src="https://i.ibb.co/3mCBHJsd/1photo.png" alt="EcoAlliance - Chatbot con IA" class="w-40 h-40 object-cover rounded-md shadow-md" />
-      <div class="flex-1">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
-          EcoAlliance - Chatbot con IA y Base de Datos
-        </h3>
-
-        <!-- Iconos de tecnologías -->
-        <div class="flex flex-wrap items-center space-x-2 mt-2">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="30" alt="React" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="30" alt="JavaScript" />
-          <img src="https://nestjs.com/img/logo_text.svg" width="60" alt="NestJS" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" width="30" alt="PostgreSQL" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width="40" alt="Next.js" />
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300" data-aos="flip-left" data-aos-delay="100">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="https://i.ibb.co/3mCBHJsd/1photo.png" alt="EcoAlliance" class="w-20 h-20 object-cover rounded-lg shadow-md" />
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-green-200">
+              EcoAlliance
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Chatbot con IA y Base de Datos</p>
+          </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-2 mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="28" height="28" alt="React" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="28" height="28" alt="JavaScript" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://nestjs.com/img/logo_text.svg" width="56" height="28" alt="NestJS" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" width="28" height="28" alt="PostgreSQL" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width="36" height="28" alt="Next.js" class="opacity-80 hover:opacity-100 transition-opacity" />
         </div>
 
-        <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed text-sm md:text-base">
+        <p class="text-gray-600 dark:text-green-200/80 mb-6 leading-relaxed">
           Desarrollo de <strong>EcoAlliance</strong> en WordPress y creación de una nueva plataforma con <strong>Next.js y NestJS</strong>. Se integró un <strong>chatbot con IA</strong> conectado a <strong>PostgreSQL</strong> para consultas en tiempo real sobre productos.
         </p>
 
-        <!-- Botones "Ver demo", "Ver WordPress" y GitHub -->
-        <div class="flex items-center space-x-3 mt-3">
-          <a href="https://deploy130130.vercel.app/" target="_blank" class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm">
+        <div class="flex items-center space-x-4">
+          <a href="https://deploy130130.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-medium">
             Ver demo
           </a>
-          <a href="https://ecoalliance.cl" target="_blank" class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm">
-            Ver WordPress
+          <a href="https://ecoalliance.cl" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-green-500 text-green-500 dark:text-green-400 rounded-lg hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors text-sm font-medium">
+            WordPress
           </a>
-          <a href="https://github.com/rxzkie/deploy130130" target="_blank" rel="noopener noreferrer">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" alt="GitHub" />
+          <a href="https://github.com/rxzkie/deploy130130" target="_blank" rel="noopener noreferrer" class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" height="20" alt="GitHub" />
           </a>
         </div>
       </div>
-    </div>
 
-    <!-- 🟣 Plataforma E-commerce con Django & Bootstrap -->
-    <div class="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 border-l-2 border-green-300 dark:border-green-700 pl-4 md:pl-6 pb-6">
-      <img src="https://i.ibb.co/PzsG0hrj/Sin-t-tulo.png" alt="E-commerce con Django" class="w-40 h-40 object-cover rounded-md shadow-md" />
-      <div class="flex-1">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
-          Plataforma E-commerce con Django & Bootstrap
-        </h3>
-
-        <div class="flex flex-wrap items-center space-x-2 mt-2">
-          <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="60" alt="Django" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="30" alt="Bootstrap" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="30" alt="Python" />
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300" data-aos="flip-right" data-aos-delay="200">
+        <div class="flex items-center space-x-4 mb-4">
+          <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-md">
+            <span class="text-white font-bold text-2xl">BM</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-green-200">
+              Bobby McAwley
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Mentoría Empresarial</p>
+          </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-2 mb-4">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-80 hover:opacity-100 transition-opacity">
+            <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.068-.9 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.584-.03-.65.855-.075.885 0 0 .54.06 1.035.105l1.68 5.205-2.37 7.08-2.39-7.08c.496-.045.975-.105.975-.105.582-.075.516-.93-.069-.9 0 0-1.746.135-2.874.135-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.138-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.761.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.403-2.325.607-3.582.607m-9.825-12.5c-.06.137-.121.278-.177.426l-3.12 9.816C2.758 22.203 7.068 24 12 24c.825 0 1.63-.075 2.405-.218-.024-.038-.05-.074-.069-.12l-3.237-9.406-3.984 11.577c-2.353-1.64-3.971-4.388-3.971-7.523 0-2.172.82-4.15 2.158-5.637m15.9 2.344c.218.385.412.785.583 1.201l-2.471 7.172c-.325.955-.678 1.688-.678 2.206 0 .584.245 1.067.587 1.443 2.506-1.796 4.28-4.65 4.28-7.943 0-1.312-.302-2.55-.749-3.703z" fill="currentColor" class="text-blue-600 dark:text-blue-400"/>
+          </svg>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" width="28" height="28" alt="PHP" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="28" height="28" alt="JavaScript" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="28" height="28" alt="CSS" class="opacity-80 hover:opacity-100 transition-opacity" />
         </div>
 
-        <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed text-sm md:text-base">
+        <p class="text-gray-600 dark:text-green-200/80 mb-6 leading-relaxed">
+          Sitio web profesional para <strong>Bobby McAwley</strong>, mentoría empresarial personalizada. Plataforma desarrollada con <strong>WordPress, PHP, JavaScript y CSS</strong> que incluye secciones de mentoría, programas, testimonios y contacto con formularios interactivos.
+        </p>
+
+        <div class="flex items-center space-x-4">
+          <a href="https://bobbymcawley.cl/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-medium">
+            Ver sitio
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300" data-aos="flip-left" data-aos-delay="300">
+        <div class="flex items-center space-x-4 mb-4">
+          <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center shadow-md">
+            <span class="text-white font-bold text-xl">TS</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-green-200">
+              Total Services SPA
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Arriendo de Maquinaria Pesada</p>
+          </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-2 mb-4 items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width="36" height="28" alt="Next.js" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-80 hover:opacity-100 transition-opacity dark:invert">
+            <rect width="24" height="24" rx="2" fill="currentColor" opacity="0.1"/>
+            <path d="M12 2L6 5v6l6 3 6-3V5l-6-3zm0 2.5l4 2v4l-4 2-4-2v-4l4-2z" fill="currentColor"/>
+            <circle cx="12" cy="9" r="1" fill="currentColor"/>
+          </svg>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="28" height="28" alt="Tailwind CSS" class="opacity-80 hover:opacity-100 transition-opacity" />
+        </div>
+
+        <p class="text-gray-600 dark:text-green-200/80 mb-6 leading-relaxed">
+          Sitio web para <strong>Total Service SPA</strong>, especialistas en arriendo de maquinaria pesada para construcción y minería. Desarrollado con <strong>Next.js, Radix UI y Tailwind CSS</strong>, incluye catálogo de servicios, formularios de contacto y diseño responsive.
+        </p>
+
+        <div class="flex items-center space-x-4">
+          <a href="https://www.totalservicesspa.cl/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-medium">
+            Ver sitio
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300" data-aos="flip-right" data-aos-delay="400">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="https://i.ibb.co/PzsG0hrj/Sin-t-tulo.png" alt="E-commerce Django" class="w-20 h-20 object-cover rounded-lg shadow-md" />
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-green-200">
+              E-commerce Django
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Plataforma E-commerce</p>
+          </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-2 mb-4">
+          <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="56" height="28" alt="Django" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="28" height="28" alt="Bootstrap" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="28" height="28" alt="Python" class="opacity-80 hover:opacity-100 transition-opacity" />
+        </div>
+
+        <p class="text-gray-600 dark:text-green-200/80 mb-6 leading-relaxed">
           Plataforma de e-commerce con <strong>Django y Bootstrap</strong>, permitiendo gestión de productos, carritos y un sistema de pago seguro.
         </p>
 
-        <div class="flex items-center space-x-3 mt-3">
-          <a href="https://urbangrowshop.pythonanywhere.com/index" target="_blank" class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm">
+        <div class="flex items-center space-x-4">
+          <a href="https://urbangrowshop.pythonanywhere.com/index" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-medium">
             Ver demo
           </a>
-          <a href="https://github.com/tu-usuario/ecommerce-django" target="_blank" rel="noopener noreferrer">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" alt="GitHub" />
+          <a href="https://github.com/tu-usuario/ecommerce-django" target="_blank" rel="noopener noreferrer" class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" height="20" alt="GitHub" />
           </a>
         </div>
       </div>
-    </div>
 
-    <!-- 🟢 Minimental Test - Evaluación Clínica con PDF -->
-    <div class="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 border-l-2 border-green-300 dark:border-green-700 pl-4 md:pl-6 pb-6">
-      <img src="https://i.ibb.co/LdDRkjdg/exzpo.png" alt="Minimental Test - Evaluación Clínica" class="w-40 h-40 object-cover rounded-md shadow-md" />
-      <div class="flex-1">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
-          Minimental Test - Evaluación Clínica con PDF
-        </h3>
-
-        <!-- Iconos de tecnologías -->
-        <div class="flex flex-wrap items-center gap-4 mt-2">
-          <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 256 231" preserveAspectRatio="xMidYMid">
-              <path d="M121 85c2-3 5-4 7-4 1 0 5 1 7 4 16 22 43 67 63 101l26 40c7 8 18 3 24-6s8-15 8-22c0-4-88-168-97-182-9-13-11-16-26-16h-11c-14 0-16 3-25 16C88 30 0 194 0 198c0 7 2 13 8 22s17 14 24 6l26-40c20-34 47-79 63-101Z" fill="#000020"/>
-            </svg>
-            <span class="text-gray-600 dark:text-green-200 text-sm">Expo</span>
-          </div>
-
-          <div class="flex items-center space-x-2">
-            <img src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" class="w-6 h-6" alt="Redux" />
-            <span class="text-gray-600 dark:text-green-200 text-sm">Redux</span>
-          </div>
-
-          <div class="flex items-center space-x-2">
-            <svg class="w-6 h-6" viewBox="0 0 256 154" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
-              <defs>
-                <linearGradient x1="-2.778%" y1="32%" x2="100%" y2="67.556%" id="gradient">
-                  <stop stop-color="#2298BD" offset="0%"></stop>
-                  <stop stop-color="#0ED7B5" offset="100%"></stop>
-                </linearGradient>
-              </defs>
-              <path d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0ZM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8Z" fill="url(#gradient)"></path>
-            </svg>
-            <span class="text-gray-600 dark:text-green-200 text-sm">NativeWind</span>
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300" data-aos="flip-left" data-aos-delay="500">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="https://i.ibb.co/LdDRkjdg/exzpo.png" alt="Minimental Test" class="w-20 h-20 object-cover rounded-lg shadow-md" />
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-green-200">
+              Minimental Test
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Evaluación Clínica con PDF</p>
           </div>
         </div>
+        
+        <div class="flex flex-wrap gap-2 mb-4">
+          <div class="flex items-center space-x-1 px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 256 231" preserveAspectRatio="xMidYMid">
+              <path d="M121 85c2-3 5-4 7-4 1 0 5 1 7 4 16 22 43 67 63 101l26 40c7 8 18 3 24-6s8-15 8-22c0-4-88-168-97-182-9-13-11-16-26-16h-11c-14 0-16 3-25 16C88 30 0 194 0 198c0 7 2 13 8 22s17 14 24 6l26-40c20-34 47-79 63-101Z" fill="currentColor"/>
+            </svg>
+            <span class="text-gray-700 dark:text-gray-300 text-xs">Expo</span>
+          </div>
+          <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs">Redux</span>
+          <span class="px-2 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded text-xs">NativeWind</span>
+        </div>
 
-        <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed text-sm md:text-base">
-          <strong>Minimental Test</strong> es una aplicación móvil de evaluación clínica, desarrollada con <strong>Expo</strong>. Utiliza <strong>Redux</strong> para la gestión del estado y <strong>NativeWind</strong> para el diseño con Tailwind CSS. Permite a profesionales de la salud realizar test cognitivos y generar informes detallados en <strong>PDF</strong> con los resultados.
+        <p class="text-gray-600 dark:text-green-200/80 mb-6 leading-relaxed">
+          Aplicación móvil de evaluación clínica desarrollada con <strong>Expo</strong>. Utiliza <strong>Redux</strong> para la gestión del estado y <strong>NativeWind</strong> para el diseño. Permite realizar test cognitivos y generar informes detallados en <strong>PDF</strong>.
         </p>
 
-        <div class="flex items-center space-x-3 mt-3">
-          <a href="https://minimental.netlify.app/" target="_blank" class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm">
+        <div class="flex items-center space-x-4">
+          <a href="https://minimental.netlify.app/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-medium">
             Ver demo
           </a>
-          <a href="https://github.com/rxzkie/to.expo" target="_blank" rel="noopener noreferrer">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" alt="GitHub" />
+          <a href="https://github.com/rxzkie/to.expo" target="_blank" rel="noopener noreferrer" class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" height="20" alt="GitHub" />
           </a>
         </div>
       </div>
-    </div>
 
-    <!-- 🔵 Plataforma de Predicción de Ventas con Django -->
-    <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 border-l-2 border-green-300 dark:border-green-700 pl-4 md:pl-6 pb-6">
-      <img src="https://i.ibb.co/FbsFdM9c/APOSTEQUETEOLVIDAVA.png" alt="Plataforma de Predicción de Ventas con Django" class="w-40 h-40 object-cover rounded-md shadow-md" />
-      <div class="flex-1">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-green-200">
-          Plataforma de Predicción de Ventas con Django
-        </h3>
-
-        <div class="flex flex-wrap items-center space-x-2 mt-2">
-          <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="60" alt="Django" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="30" alt="Python" />
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300" data-aos="flip-right" data-aos-delay="600">
+        <div class="flex items-center space-x-4 mb-4">
+          <img src="https://i.ibb.co/FbsFdM9c/APOSTEQUETEOLVIDAVA.png" alt="Predicción de Ventas" class="w-20 h-20 object-cover rounded-lg shadow-md" />
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-green-200">
+              Predicción de Ventas
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Machine Learning con Django</p>
+          </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-2 mb-4">
+          <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="56" height="28" alt="Django" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="28" height="28" alt="Python" class="opacity-80 hover:opacity-100 transition-opacity" />
+          <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs">ML</span>
         </div>
 
-        <p class="text-gray-600 dark:text-green-200/80 mt-3 leading-relaxed text-sm md:text-base">
-          Plataforma de Predicción de Ventas con Django: Analiza datos históricos con Machine Learning (regresión, árboles, XGBoost). Usa Django, Python, Pandas, Sklearn y genera reportes con gráficos dinámicos
+        <p class="text-gray-600 dark:text-green-200/80 mb-6 leading-relaxed">
+          Plataforma que analiza datos históricos con <strong>Machine Learning</strong> (regresión, árboles, XGBoost). Usa <strong>Django, Python, Pandas, Sklearn</strong> y genera reportes con gráficos dinámicos.
         </p>
 
-        <div class="flex items-center space-x-3 mt-3">
-          <a href="https://renzorios.pythonanywhere.com" target="_blank" class="text-green-500 dark:text-green-400 hover:text-green-600 dark:hover:text-green-500 text-sm">
+        <div class="flex items-center space-x-4">
+          <a href="https://renzorios.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-sm font-medium">
             Ver demo
           </a>
-          <a href="https://github.com/tu-usuario/ventas-ml" target="_blank" rel="noopener noreferrer">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" alt="GitHub" />
+          <a href="https://github.com/tu-usuario/ventas-ml" target="_blank" rel="noopener noreferrer" class="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" height="20" alt="GitHub" />
           </a>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>

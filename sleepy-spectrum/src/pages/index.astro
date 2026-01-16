@@ -3,70 +3,46 @@ import Layout from "../layouts/Layout.astro";
 import SobreMi from "./experiencia.astro";
 import Proyectos from "./proyectos.astro";
 import Contacto from "./contacto.astro";
+import { Linkedin, Github, MessageCircle } from "lucide-astro";
 ---
 
 <Layout>
-  <!-- Sección "Sobre Mí" -->
   <section
     id="inicio"
     class="flex flex-col items-center justify-center bg-white dark:bg-black text-center px-6 py-20"
+    data-aos="fade-up"
   >
     <div class="max-w-4xl">
-      <h1 class="text-5xl font-bold text-black dark:text-white">
+      <h1 class="text-5xl font-bold text-black dark:text-white animate-fade-in">
         ¡Hola, soy Renzo!
       </h1>
-      <p class="text-lg text-gray-700 dark:text-gray-300 mt-3">
+      <p class="text-lg text-gray-700 dark:text-gray-300 mt-3" data-aos="fade-up" data-aos-delay="100">
         Transformo ideas en soluciones digitales reales. Desarrollo aplicaciones web modernas y apps móviles que impulsan el crecimiento de tu negocio.
       </p>
     </div>
 
-    <!-- Contenedor de iconos y botón -->
-    <div class="flex items-center gap-6 justify-center mt-6">
-      <!-- Icono LinkedIn -->
+    <div class="flex items-center gap-6 justify-center mt-6" data-aos="fade-up" data-aos-delay="200">
       <a
         href="https://www.linkedin.com/in/renzo-german-rios-abbate-041a42262/"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center justify-center w-12 h-12 bg-black dark:bg-white rounded-full transition-all duration-300 hover:scale-110"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
-          viewBox="0 0 256 256"
-          class="fill-white dark:fill-black transition-all duration-300 hover:fill-blue-600"
-        >
-          <path
-            d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
-          ></path>
-        </svg>
+        <Linkedin class="w-6 h-6 text-white dark:text-black hover:text-blue-600 transition-colors" />
       </a>
 
-      <!-- Icono GitHub -->
       <a
         href="https://github.com/rxzkie"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center justify-center w-12 h-12 bg-black dark:bg-white rounded-full transition-all duration-300 hover:scale-110"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
-          viewBox="0 0 256 250"
-          class="fill-white dark:fill-black transition-all duration-300 hover:fill-gray-500"
-        >
-          <path
-            d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Z"
-          ></path>
-        </svg>
+        <Github class="w-6 h-6 text-white dark:text-black hover:text-gray-500 transition-colors" />
       </a>
-      <!-- Botón con scroll suave -->
+
       <a
         href="#sobre-mi"
-        class="scroll-link bg-white text-black border border-green-600
-         hover:bg-green-600 hover:text-white dark:bg-black dark:text-white dark:border-green-500
-         dark:hover:bg-green-500 dark:hover:text-black text-lg font-semibold px-6 py-3 rounded-md shadow-md transition-all"
+        class="scroll-link bg-white text-black border border-green-600 hover:bg-green-600 hover:text-white dark:bg-black dark:text-white dark:border-green-500 dark:hover:bg-green-500 dark:hover:text-black text-lg font-semibold px-6 py-3 rounded-md shadow-md transition-all"
       >
         Descubre cómo puedo ayudarte
       </a>
@@ -82,51 +58,15 @@ import Contacto from "./contacto.astro";
   <!-- Sección de Contacto -->
   <Contacto />
 
-  <!-- Botón flotante de WhatsApp -->
-  <div id="whatsapp-float" class="fixed bottom-6 right-6 z-50">
+  <div id="whatsapp-float" class="fixed bottom-6 right-6 z-50" data-aos="zoom-in" data-aos-delay="500">
     <a
       href="https://api.whatsapp.com/send?phone=56983064692&text=¡Hola! Me interesa conocer más sobre tus servicios."
       target="_blank"
       rel="noopener noreferrer"
-      class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+      class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
       title="Contáctame por WhatsApp"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        class="fill-white transition-all duration-300"
-      >
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"
-        ></path>
-      </svg>
+      <MessageCircle class="w-7 h-7 text-white" />
     </a>
   </div>
-
-  <!-- Script para scroll suave -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollLinks = document.querySelectorAll(".scroll-link");
-
-      scrollLinks.forEach((link) => {
-        link.addEventListener(
-          "click",
-          function (this: HTMLAnchorElement, e: Event) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href")!.substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-              window.scrollTo({
-                top: targetElement.offsetTop - 14,
-                behavior: "smooth",
-              });
-            }
-          },
-        );
-      });
-    });
-  </script>
 </Layout>
