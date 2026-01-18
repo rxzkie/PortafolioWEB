@@ -120,22 +120,24 @@ import Footer from "../components/Footer.astro";
     <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script is:inline>
       window.addEventListener('load', function() {
+        const isMobile = window.innerWidth < 768;
+        const aosConfig = {
+          duration: isMobile ? 600 : 800,
+          easing: 'ease-in-out',
+          once: true,
+          offset: isMobile ? 50 : 100,
+          disable: false,
+          disableMutationObserver: false,
+          debounceDelay: 50,
+          throttleDelay: 99,
+        };
+        
         if (typeof AOS !== 'undefined') {
-          AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100,
-          });
+          AOS.init(aosConfig);
         } else {
           setTimeout(function() {
             if (typeof AOS !== 'undefined') {
-              AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true,
-                offset: 100,
-              });
+              AOS.init(aosConfig);
             }
           }, 100);
         }
