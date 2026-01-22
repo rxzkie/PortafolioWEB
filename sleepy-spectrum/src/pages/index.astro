@@ -9,19 +9,28 @@ import { Linkedin, Github, MessageCircle } from "lucide-astro";
 <Layout>
   <section
     id="inicio"
-    class="flex flex-col items-center justify-center bg-white dark:bg-black text-center px-6 py-20"
+    class="relative flex flex-col items-center justify-center text-center px-6 py-20 min-h-[500px] sm:min-h-[600px] overflow-hidden"
     data-aos="fade-up"
   >
-    <div class="max-w-4xl">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80" 
+        alt="Programación" 
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-white/80 dark:bg-black/70"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-4xl">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white drop-shadow-lg">
         ¡Hola, soy Renzo!
       </h1>
-      <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mt-3 px-2" data-aos="fade-up" data-aos-delay="100">
+      <p class="text-base sm:text-lg text-gray-800 dark:text-gray-300 mt-3 px-2 drop-shadow-md" data-aos="fade-up" data-aos-delay="100">
         Transformo ideas en soluciones digitales reales. Desarrollo aplicaciones web modernas y apps móviles que impulsan el crecimiento de tu negocio.
       </p>
     </div>
 
-    <div class="flex flex-wrap items-center gap-3 sm:gap-6 justify-center mt-6 px-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="relative z-10 flex flex-wrap items-center gap-3 sm:gap-6 justify-center mt-6 px-4" data-aos="fade-up" data-aos-delay="200">
       <a
         href="https://www.linkedin.com/in/renzo-german-rios-abbate-041a42262/"
         target="_blank"
@@ -42,7 +51,7 @@ import { Linkedin, Github, MessageCircle } from "lucide-astro";
 
       <a
         href="#sobre-mi"
-        class="scroll-link bg-white text-black border border-green-600 hover:bg-green-600 hover:text-white dark:bg-black dark:text-white dark:border-green-500 dark:hover:bg-green-500 dark:hover:text-black text-sm sm:text-base md:text-lg font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-md shadow-md transition-all active:scale-95"
+        class="scroll-link bg-purple-100/60 text-black border border-green-600 hover:bg-green-600 hover:text-white dark:bg-black dark:text-white dark:border-green-500 dark:hover:bg-green-500 dark:hover:text-black text-sm sm:text-base md:text-lg font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-md shadow-md transition-all active:scale-95"
       >
         Descubre cómo puedo ayudarte
       </a>
