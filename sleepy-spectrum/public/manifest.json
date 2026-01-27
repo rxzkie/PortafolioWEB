@@ -1,0 +1,20 @@
+{
+  "name": "Renzo Ríos | Desarrollador Full Stack",
+  "short_name": "Renzo Ríos",
+  "description": "Desarrollador Full Stack en Chile especializado en React, Next.js, Django y aplicaciones móviles",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "lang": "es-CL",
+  "categories": ["business", "portfolio", "technology"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
