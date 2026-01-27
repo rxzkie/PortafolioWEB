@@ -9,24 +9,24 @@ const menuItems = [
 ];
 ---
 
-<header class="fixed w-full top-0 z-50 bg-white/50 dark:bg-gray-800/80 backdrop-blur-md transition-all">
+<header class="fixed w-full top-0 z-50 bg-sky-50/80 dark:from-slate-900/90 dark:via-purple-900/80 dark:to-slate-900/90 dark:bg-gradient-to-r backdrop-blur-lg border-b border-sky-100/50 dark:border-white/10 shadow-sm dark:shadow-lg dark:shadow-purple-500/10 transition-all">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav class="flex items-center justify-center h-16 relative">
       <div class="hidden md:flex space-x-6">
         {menuItems.map(item => (
-          <a href={item.href} class="nav-link text-gray-900 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors">
+          <a href={item.href} class="nav-link text-sky-700 dark:text-gray-200 hover:text-sky-500 dark:hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-sky-400 dark:after:bg-purple-500 hover:after:w-full after:transition-all">
             {item.name}
           </a>
         ))}
       </div>
 
       <div class="absolute right-4 flex items-center gap-3">
-        <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 shadow-sm hover:shadow-md">
-          <Sun id="sun-icon" class="w-5 h-5 text-yellow-500 hidden dark:block" />
-          <Moon id="moon-icon" class="w-5 h-5 text-gray-600 dark:hidden" />
+        <button id="dark-mode-toggle" class="p-2 rounded-lg bg-sky-100/50 dark:bg-white/10 hover:bg-sky-200/50 dark:hover:bg-white/20 transition-all duration-300 shadow-sm hover:shadow-sky-200/50 dark:hover:shadow-purple-500/20">
+          <Sun id="sun-icon" class="w-5 h-5 text-yellow-400 hidden dark:block" />
+          <Moon id="moon-icon" class="w-5 h-5 text-sky-600 dark:hidden" />
         </button>
         
-        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors">
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-sky-700 dark:text-gray-200 hover:text-sky-500 dark:hover:text-purple-400 transition-colors">
           <Menu id="menu-icon" class="h-6 w-6" />
           <X id="close-icon" class="h-6 w-6 hidden" />
         </button>
@@ -35,10 +35,10 @@ const menuItems = [
   </div>
 
   <!-- Menú móvil -->
-  <div id="mobile-menu" class="hidden bg-white dark:bg-gray-700 md:hidden">
+  <div id="mobile-menu" class="hidden bg-sky-50/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-sky-100/50 dark:border-white/10 md:hidden">
     <div class="px-2 pt-2 pb-3 space-y-1">
       {menuItems.map(item => (
-        <a href={item.href} class="nav-link block text-gray-900 dark:text-gray-200 hover:text-indigo-500 px-3 py-2 rounded-md text-base font-medium transition-colors">
+        <a href={item.href} class="nav-link block text-sky-700 dark:text-gray-200 hover:text-sky-500 dark:hover:text-purple-400 hover:bg-sky-100/50 dark:hover:bg-white/5 px-3 py-2 rounded-md text-base font-medium transition-colors">
           {item.name}
         </a>
       ))}
@@ -91,7 +91,7 @@ const menuItems = [
       const savedTheme = localStorage.getItem("theme");
       if (savedTheme) {
         root.classList.toggle("dark", savedTheme === "dark");
-      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      } else {
         root.classList.add("dark");
       }
       updateIcons();
