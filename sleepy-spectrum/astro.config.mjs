@@ -8,5 +8,5 @@ export default defineConfig({
   integrations: [tailwind()],
   image: {
     domains: ["images.unsplash.com", "i.ibb.co", "github.githubassets.com"],
-  }
+  },
 });
